@@ -26,26 +26,67 @@
 
     <div class='row'>
       <div class='col-md-6 col-md-offset-3'>
-        <h4>Todo List:</h4>
-        <form ng-submit='addTask()'>
+        <form ng-submit='addReview()'>
           <div class='form-group'>
-            <input type="text" ng-model='newTask'
+            <label for="name">What is your name?</label>
+            <input type="text" ng-model='name'
                    class='form-control' />
           </div>
+
+          <div class='form-group'>
+            <label for="pairing">How was pairing today?</label>
+              <select ng-model="pairing">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+          </div>
+
+          <div class='form-group'>
+            <label for="challenge">How do you feel about the challenge so far?</label>
+              <select ng-model="challenge">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+          </div>
+
+          <div class='form-group'>
+            <label for="feeling">How are you feeling?</label>
+              <select ng-model="feeling">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+          </div>
+
+          <div class='form-group'>
+            <label for="confidence">Do you feel confident that you will finish the challenge?</label>
+              <select ng-model="confidence">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+          </div>
+
+          <div class='form-group'>
+            <label for="comments">Additional Comments:</label>
+            <br>
+              <textarea rows="4" cols="60" ng-model="comments" placeholder="Enter Comments"></textarea>
+          </div>
           <input type='submit' class='btn
-          btn-primary' value='Add Task'>
+          btn-primary' value='Submit'>
         </form>
       </div>
-  </div>
-<hr/>
-
-    <div ng-repeat='msg in messages'>
-      {{ msg }}
     </div>
-    <form ng-submit='addReview()'>
-      <label for="name">Name:</label>
-      <input type="text" ng-model= 'name'/>
-    </form>
 
 
 

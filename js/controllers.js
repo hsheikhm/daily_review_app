@@ -7,9 +7,22 @@ dailyReviewApp.controller('FormCtrl', ['$scope', '$firebaseArray',
 
       $scope.addReview = function() {
         $scope.reviews.$add({
-          name: $scope.name
+          name: $scope.name,
+          pairing: $scope.pairing,
+          challenge: $scope.challenge,
+          feeling: $scope.feeling,
+          confidence: $scope.confidence,
+          comments: $scope.comments
         });
-      }
+          $scope.name = '';
+          $scope.pairing = '';
+          $scope.challenge = '';
+          $scope.feeling = '';
+          $scope.confidence = '';
+          $scope.comments = '';
+
+      };
+
 
 
 }]);
