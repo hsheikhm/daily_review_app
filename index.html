@@ -12,7 +12,7 @@
         <div class='container'>
           <div class='navbar-header'>
             <a class='navbar-brand' href='/'>
-              Daily Review Application
+              Makers Academy Daily Review
             </a>
           </div>
           <ul class='nav navbar-nav navbar-right'>
@@ -24,71 +24,9 @@
       </nav>
     </header>
 
-    <div class='row'>
-      <div class='col-md-6 col-md-offset-3'>
-        <form ng-submit='addReview()'>
-          <div class='form-group'>
-            <label for="name">What is your name?</label>
-            <input type="text" ng-model='name'
-                   class='form-control' />
-          </div>
-
-          <div class='form-group'>
-            <label for="pairing">How was pairing today?</label>
-              <select ng-model="pairing">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-          </div>
-
-          <div class='form-group'>
-            <label for="challenge">How do you feel about the challenge so far?</label>
-              <select ng-model="challenge">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-          </div>
-
-          <div class='form-group'>
-            <label for="feeling">How are you feeling?</label>
-              <select ng-model="feeling">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-          </div>
-
-          <div class='form-group'>
-            <label for="confidence">Do you feel confident that you will finish the challenge?</label>
-              <select ng-model="confidence">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-          </div>
-
-          <div class='form-group'>
-            <label for="comments">Additional Comments:</label>
-            <br>
-              <textarea rows="4" cols="60" ng-model="comments" placeholder="Enter Comments"></textarea>
-          </div>
-          <input type='submit' class='btn
-          btn-primary' value='Submit'>
-        </form>
-      </div>
+    <div class="container">
+      <div ng-view></div>
     </div>
-
-
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
@@ -97,7 +35,7 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
+    <script src="app/js/app.js"></script>
+    <script src="app/js/controllers.js"></script>
   </body>
 </html>

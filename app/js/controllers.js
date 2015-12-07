@@ -23,6 +23,4 @@ dailyReviewApp.controller('FormCtrl', ['$scope', '$firebaseArray',
 
       };
 
-
-
 }]);
