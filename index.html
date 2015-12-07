@@ -7,14 +7,45 @@
   </head>
   <body ng-controller="FormCtrl">
 
-    <ul id="example-messages" class="example-chat-messages">
-      <li ng-repeat="msg in messages">
-        <strong class="example-chat-username">{{ msg.from }}</strong>
-        {{ msg.body }}
-      </li>
-    </ul>
+    <header>
+      <nav class='navbar navbar-default'>
+        <div class='container'>
+          <div class='navbar-header'>
+            <a class='navbar-brand' href='/'>
+              Daily Review Application
+            </a>
+          </div>
+          <ul class='nav navbar-nav navbar-right'>
+            <li>
+              <a href='#'><i class='fa fa-home'></i>Home </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
+    <div class='row'>
+      <div class='col-md-6 col-md-offset-3'>
+        <h4>Todo List:</h4>
+        <form ng-submit='addTask()'>
+          <div class='form-group'>
+            <input type="text" ng-model='newTask'
+                   class='form-control' />
+          </div>
+          <input type='submit' class='btn
+          btn-primary' value='Add Task'>
+        </form>
+      </div>
+  </div>
+<hr/>
 
+    <div ng-repeat='msg in messages'>
+      {{ msg }}
+    </div>
+    <form ng-submit='addReview()'>
+      <label for="name">Name:</label>
+      <input type="text" ng-model= 'name'/>
+    </form>
 
 
 
