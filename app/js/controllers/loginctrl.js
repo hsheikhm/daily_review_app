@@ -1,0 +1,35 @@
+dailyReviewApp.controller('LoginCtrl', ['$scope', '$location',
+  function($scope, $location) {
+
+    var ref = new Firebase("https://shining-fire-9962.firebaseio.com");
+
+    $scope.loginUser = function() {
+      ref.authWithPassword({
+        email    : $scope.email,
+        password : $scope.password
+      }, function(error, authData) {
+        if (error) {
+          console.log("Login Failed!", error);
+        } else {
+          if ($scope.email === "admin@makers.com") {
+            console.log("Authenticated successfully with payload:", authData);
+            $scope.$apply(function() { $location.path("/login-success-path-coach"); });
+          } else {
+            console.log("Authenticated successfully with payload:", authData);
+            $scope.$apply(function() { $location.path("/login-success-path-student"); });
+          }
+        }
+      });
+    };
+
+    $scope.loginGitHub = function() {
+        ref.authWithOAuthPopup("github", function(error, authData) {
+        if (error) {
+          console.log("Login Failed!", error);
+        } else {
+          console.log("Authenticated successfully with payload:", authData);
+          $scope.$apply(function() { $location.path("/login-success-path-student"); });
+        }
+      });
+    };
+  }]);

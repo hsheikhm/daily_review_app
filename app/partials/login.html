@@ -1,0 +1,18 @@
+<div id="container" class="container form" ng-controller="LoginCtrl">
+    <!-- LOGIN -->
+    <form id="Login" role="form" ng-submit="loginUser()">
+         <h2>Login</h2>
+
+        <div class="form-group">
+            <label for="Email">Email address</label>
+            <input type="email" class="form-control" placeholder="Enter email" ng-model="email" />
+        </div>
+        <div class="form-group">
+            <label for="Password">Password</label>
+            <input type="password" class="form-control" placeholder="Password" ng-model="password" />
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <br />
+        <br />
+    </form>
+    <button class="btn btn-success bt-social" data-provider="github" ng-click="loginGitHub()">Login via GitHub</button>

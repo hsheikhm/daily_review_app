@@ -8,6 +8,7 @@ dailyReviewApp.controller('FormCtrl', ['$scope', '$firebaseArray',
       $scope.addReview = function() {
         $scope.reviews.$add({
           name: $scope.name,
+          cohort: $scope.cohort,
           pairing: $scope.pairing,
           challenge: $scope.challenge,
           feeling: $scope.feeling,
@@ -20,7 +21,5 @@ dailyReviewApp.controller('FormCtrl', ['$scope', '$firebaseArray',
           $scope.feeling = '';
           $scope.confidence = '';
           $scope.comments = '';
-
       };
-
 }]);
