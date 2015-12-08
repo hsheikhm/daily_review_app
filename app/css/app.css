@@ -1,3 +1,11 @@
 .form {
   width: 500px;
 }
+
+.btn.btn-social.btn-block.btn-github {
+  text-align: center;
+}
+
+.btn-social>:first-child {
+  left: 162px !important;
+}

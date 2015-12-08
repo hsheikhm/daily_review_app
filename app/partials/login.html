@@ -11,8 +11,11 @@
             <label for="Password">Password</label>
             <input type="password" class="form-control" placeholder="Password" ng-model="password" />
         </div>
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-block btn-primary">Login</button>
         <br />
         <br />
     </form>
-    <button class="btn btn-success bt-social" data-provider="github" ng-click="loginGitHub()">Login via GitHub</button>
+    <button class="btn btn-social btn-block btn-github" data-provider="github"
+              ng-click="loginGitHub()">
+              <span class="fa fa-github"></span> Sign in with GitHub
+    </button>
