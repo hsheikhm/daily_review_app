@@ -17,6 +17,7 @@ dailyReviewApp.controller('LoginCtrl', ['$scope', '$location', '$rootScope',
           } else {
             console.log("Authenticated successfully with payload:", authData);
             $scope.$apply(function() { $location.path("/login-success-path-student"); });
+            $rootScope.userEmail = authData.password.email;
           }
         }
       });
