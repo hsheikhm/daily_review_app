@@ -15,11 +15,7 @@ dailyReviewApp.controller('FindingsCtrl', ['$scope', '$firebaseArray', '$firebas
         console.log(obj.cohorts);
       });
 
-
-
-
-
-
+  
 
   }]);
 
