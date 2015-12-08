@@ -2,56 +2,58 @@
   <div class='col-md-6 col-md-offset-3'>
     <form ng-submit='addReview()'>
 
-      <div class="form-group">
-          <label for="cohort">Which Cohort are you in?</label>
-            <select ng-model="cohort">
-              <option value="junior">Junior</option>
-              <option value="senior">Senior</option>
-            </select>
+      <div class='form-group'>
+        <label for="cohort">Which Cohort are you in?</label>
+        <br>
+        <ul class="pagination">
+          <li ng-class="{active: cohort === 'Junior'}"><a ng-click="cohort = 'Junior'" href>Junior <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{active: cohort === 'Senior'}"><a ng-click="cohort = 'Senior'" href>Senior <span class="sr-only">(current)</span></a></li>
+        </ul>
       </div>
 
       <div class='form-group'>
         <label for="pairing">How was pairing today?</label>
-          <select ng-model="pairing">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
+        <br>
+        <ul class="pagination">
+          <li ng-class="{active: pairing === 1}"><a ng-click="pairing = 1" href>1 <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{active: pairing === 2}"><a ng-click="pairing = 2" href>2 <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{active: pairing === 3}"><a ng-click="pairing = 3" href>3 <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{active: pairing === 4}"><a ng-click="pairing = 4" href>4 <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{active: pairing === 5}"><a ng-click="pairing = 5" href>5 <span class="sr-only">(current)</span></a></li>
+        </ul>
       </div>
 
       <div class='form-group'>
         <label for="challenge">How do you feel about the challenge so far?</label>
-          <select ng-model="challenge">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-      </div>
-
-      <div class='form-group'>
-        <label for="feeling">How are you feeling?</label>
-          <select ng-model="feeling">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
+        <br>
+        <ul class="pagination">
+          <li ng-class="{active: challenge === 1}"><a ng-click="challenge = 1" href>1 <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{active: challenge === 2}"><a ng-click="challenge = 2" href>2 <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{active: challenge === 3}"><a ng-click="challenge = 3" href>3 <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{active: challenge === 4}"><a ng-click="challenge = 4" href>4 <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{active: challenge === 5}"><a ng-click="challenge = 5" href>5 <span class="sr-only">(current)</span></a></li>
+        </ul>
       </div>
 
       <div class='form-group'>
         <label for="confidence">Do you feel confident that you will finish the challenge?</label>
-          <select ng-model="confidence">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
+        <br>
+        <ul class="pagination">
+          <li ng-class="{active: confidence === 'Yes'}"><a ng-click="confidence = 'Yes'" href>Yes <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{active: confidence === 'No'}"><a ng-click="confidence = 'No'" href>No <span class="sr-only">(current)</span></a></li>
+        </ul>
+      </div>
+
+      <div class='form-group'>
+        <label for="feeling">How is your mood today?</label>
+        <br>
+        <ul class="pagination">
+          <li ng-class="{active: feeling === 1}"><a ng-click="feeling = 1" href>1 <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{active: feeling === 2}"><a ng-click="feeling = 2" href>2 <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{active: feeling === 3}"><a ng-click="feeling = 3" href>3 <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{active: feeling === 4}"><a ng-click="feeling = 4" href>4 <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{active: feeling === 5}"><a ng-click="feeling = 5" href>5 <span class="sr-only">(current)</span></a></li>
+        </ul>
       </div>
 
       <div class='form-group'>
