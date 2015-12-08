@@ -1,34 +1,33 @@
-dailyReviewApp.controller('FormCtrl', ['$scope', '$firebaseArray', '$rootScope',
-  function($scope, $firebaseArray, $rootScope) {
+dailyReviewApp.controller('FormCtrl', ['$scope', '$firebaseArray', '$rootScope', '$filter',
+  function($scope, $firebaseArray, $rootScope, $filter) {
 
       var ref = new Firebase("https://shining-fire-9962.firebaseio.com");
-
-      // $scope.juniorReviews = $firebaseArray(juniorsRef);
-      // $scope.seniorReviews = $firebaseArray(seniorsRef);
 
       var juniorsRef = ref.child("juniors");
       var seniorsRef = ref.child("seniors");
 
       $scope.addReview = function() {
         if($scope.cohort === 'Junior') {
-            juniorsRef.set({
+            juniorsRef.child($rootScope.userEmail || $rootScope.userName).push({
               name: $rootScope.userEmail || $rootScope.userName,
               cohort: $scope.cohort,
               pairing: $scope.pairing,
               challenge: $scope.challenge,
               feeling: $scope.feeling,
               confidence: $scope.confidence,
-              comments: $scope.comments
+              comments: $scope.comments,
+              date: $filter('date')(new Date(), 'dd-MM-yy')
           });
         } else {
-            seniorsRef.set({
+            seniorsRef.child($rootScope.userEmail || $rootScope.userName).push({
               name: $rootScope.userEmail || $rootScope.userName,
               cohort: $scope.cohort,
               pairing: $scope.pairing,
               challenge: $scope.challenge,
               feeling: $scope.feeling,
               confidence: $scope.confidence,
-              comments: $scope.comments
+              comments: $scope.comments,
+              date: $filter('date')(new Date(), 'dd-MM-yy')
             });
         }
           $scope.name = '';
