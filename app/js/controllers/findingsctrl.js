@@ -14,6 +14,15 @@ dailyReviewApp.controller('FindingsCtrl', ['$scope', '$firebaseArray', '$firebas
         $scope.cohorts.push(key);
       });
     });
+<<<<<<< HEAD
+=======
+    $scope.data = obj;
+    obj.$bindTo($scope, "data");
+
+
+
+
+>>>>>>> master
 
 
 
