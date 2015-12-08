@@ -2,55 +2,31 @@ dailyReviewApp.controller('FindingsCtrl', ['$scope', '$firebaseArray', '$firebas
   function($scope, $firebaseArray, $firebaseObject) {
 
       var ref = new Firebase("https://shining-fire-9962.firebaseio.com");
+      var cohortsRef = new Firebase("https://shining-fire-9962.firebaseio.com/cohorts");
 
+      var obj = $firebaseObject(ref);
+      $scope.cohorts = [];
 
+      obj.$loaded().then(function() {
+        angular.forEach(obj.cohorts, function(value, key) {
+          $scope.cohorts.push(key);
 
-
-    var obj = $firebaseObject(ref);
-    $scope.cohorts = [];
-
-    obj.$loaded().then(function() {
-      angular.forEach(obj.cohorts, function(value, key) {
-        $scope.cohorts.push(key);
+        });
+        console.log(obj.cohorts);
       });
-    });
-    $scope.data = obj;
-    obj.$bindTo($scope, "data");
 
 
 
 
 
-
-
-
-
-
-
-
-    // $scope.object = $firebaseObject(ref);
-    //
-    // console.log($scope.object.cohorts);
-    //
-
-
-
-    // var sync = $firebase(firebaseObj);
-    //
-    // $scope.cohorts = sync.$asArray();
-
-
-
-  //   $scope.information = {};
-  //
-  //   $scope.grabData = function() {
-  //     ref.on("value", function(snapshot) {
-  //       $scope.information = snapshot.val();
-  //     console.log(snapshot.val());
-  //   }, function (errorObject) {
-  //     console.log("The read failed: " + errorObject.code);
-  //   });
-  // };
 
 
   }]);
+
+// console.log(value["Chuka Ebi"]["-K51nc6HhFWLtZUuzV9X"].pairing);
+
+// var chukasArray = $firebaseObject(chukasRef);
+//
+// chukasArray.$loaded().then(function() {
+//   console.log(chukasArray);
+// });
