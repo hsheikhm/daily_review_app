@@ -1,5 +1,5 @@
-dailyReviewApp.controller('FormCtrl', ['$scope', '$firebaseArray',
-  function($scope, $firebaseArray) {
+dailyReviewApp.controller('FormCtrl', ['$scope', '$firebaseArray', '$rootScope',
+  function($scope, $firebaseArray, $rootScope) {
 
       var ref = new Firebase("https://shining-fire-9962.firebaseio.com");
 
@@ -7,7 +7,7 @@ dailyReviewApp.controller('FormCtrl', ['$scope', '$firebaseArray',
 
       $scope.addReview = function() {
         $scope.reviews.$add({
-          name: $scope.name,
+          name: $rootScope.userName,
           cohort: $scope.cohort,
           pairing: $scope.pairing,
           challenge: $scope.challenge,

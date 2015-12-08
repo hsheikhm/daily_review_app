@@ -1,5 +1,5 @@
-dailyReviewApp.controller('LoginCtrl', ['$scope', '$location',
-  function($scope, $location) {
+dailyReviewApp.controller('LoginCtrl', ['$scope', '$location', '$rootScope',
+  function($scope, $location, $rootScope) {
 
     var ref = new Firebase("https://shining-fire-9962.firebaseio.com");
 
@@ -22,13 +22,15 @@ dailyReviewApp.controller('LoginCtrl', ['$scope', '$location',
       });
     };
 
+
     $scope.loginGitHub = function() {
         ref.authWithOAuthPopup("github", function(error, authData) {
         if (error) {
           console.log("Login Failed!", error);
         } else {
-          console.log("Authenticated successfully with payload:", authData);
+          console.log("Authenticated successfully with payload:", authData.github.displayName);
           $scope.$apply(function() { $location.path("/login-success-path-student"); });
+          $rootScope.userName = authData.github.displayName;
         }
       });
     };
