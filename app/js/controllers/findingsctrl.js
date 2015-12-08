@@ -10,21 +10,10 @@ dailyReviewApp.controller('FindingsCtrl', ['$scope', '$firebaseArray', '$firebas
     $scope.cohorts = [];
 
     obj.$loaded().then(function() {
-      console.log("loaded record:", obj);
-
       angular.forEach(obj.cohorts, function(value, key) {
         $scope.cohorts.push(key);
-        console.log($scope.cohorts);
       });
     });
-
-    $scope.data = obj;
-
-    obj.$bindTo($scope, "data");
-
-
-
-
 
 
 

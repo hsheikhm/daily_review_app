@@ -10,9 +10,9 @@
   left: 162px !important;
 }
 
-.sidebar {
+.sidebar-students {
   position : absolute;
-  top: 0;
+  top: 300px;
   left: -160px;
   transition : 100ms left;
 }
@@ -37,8 +37,8 @@
 }
 .student  {
   display : block;
+  color: white;
   background-color : #444;
-  color : white;
   line-height : 2em;
   text-decoration : none;
   padding : 10px 30px;
