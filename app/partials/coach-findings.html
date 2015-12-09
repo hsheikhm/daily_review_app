@@ -1,23 +1,18 @@
-
-
-
 <div class='row'>
   <div class='col-md-offset-3 col-md-6' ng-repeat='user in users'>
-    <p>
-    {{user.name}}
-    {{user.challenge}}
-    </p>
+
   </div>
-  <p>
-    Junior Challenge Average: {{juniorChallengeAverage | number: 1}}
-  </p>
-  <p>
-    Senior Challenge Average: {{seniorChallengeAverage | number: 1}}
-  </p>
-
+  <div class='col-md-offset-3 col-md-6'>
+    <p>Junior Challenge Average: {{juniorChallengeAverage | number: 1}}</p>
+    <p>Senior Challenge Average: {{seniorChallengeAverage | number: 1}}</p>
+    <p>Junior Feeling Average: {{juniorFeelingAverage | number: 1}}</p>
+    <p>Senior Feeling Average: {{seniorFeelingAverage | number: 1}}</p>
+    <p>Junior Pairing Average: {{juniorPairingAverage | number: 1}}</p>
+    <p>Senior Pairing Average: {{seniorPairingAverage | number: 1}}</p>
+    <p>Junior Confidence Average: {{juniorConfidenceAverage}}</p>
+    <p>Senior Confidence Average: {{seniorConfidenceAverage}}</p>
+  </div>
 </div>
-
-<button ng-click="getAverage()">Click</button>
 
 
 <div class="sidebar-students" ng-controller="ToggleCtrl" sidebar-directive="state">
