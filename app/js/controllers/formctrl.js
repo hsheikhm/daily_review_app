@@ -14,6 +14,7 @@ dailyReviewApp.controller('FormCtrl', ['$scope', '$rootScope', '$filter',
           comments: $scope.comments,
           date: $filter('date')(new Date(), 'dd-MM-yy')
         });
+          $scope.cohort = '';
           $scope.name = '';
           $scope.pairing = '';
           $scope.challenge = '';
@@ -22,30 +23,3 @@ dailyReviewApp.controller('FormCtrl', ['$scope', '$rootScope', '$filter',
           $scope.comments = '';
         };
     }]);
-
-
-
-
-
-
-
-
-// $scope.addReview = function() {
-//   cohortsRef.child($scope.cohort).child($rootScope.userEmail || $rootScope.userName).push({
-//     name: $rootScope.userEmail || $rootScope.userName,
-//     cohort: $scope.cohort,
-//     pairing: $scope.pairing,
-//     challenge: $scope.challenge,
-//     feeling: $scope.feeling,
-//     confidence: $scope.confidence,
-//     comments: $scope.comments,
-//     date: $filter('date')(new Date(), 'dd-MM-yy')
-//   });
-//     $scope.name = '';
-//     $scope.pairing = '';
-//     $scope.challenge = '';
-//     $scope.feeling = '';
-//     $scope.confidence = '';
-//     $scope.comments = '';
-//   };
-//
