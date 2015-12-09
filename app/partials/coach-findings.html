@@ -7,9 +7,17 @@
     {{user.name}}
     {{user.challenge}}
     </p>
-    <p>{{juniorsChallengeRatings}}</p>
   </div>
+  <p>
+    Junior Challenge Average: {{juniorChallengeAverage | number: 1}}
+  </p>
+  <p>
+    Senior Challenge Average: {{seniorChallengeAverage | number: 1}}
+  </p>
+
 </div>
+
+<button ng-click="getAverage()">Click</button>
 
 <!-- <p>Junior Challenge Ratings: {{juniorChallengeRatings}}</p>
   <p>Junior Feeling Ratings: {{juniorFeelingRatings}}</p>

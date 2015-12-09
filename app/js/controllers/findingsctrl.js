@@ -1,25 +1,35 @@
 dailyReviewApp.controller('FindingsCtrl', ['$scope', '$firebaseObject', '$firebaseArray',
 function($scope, $firebaseObject, $firebaseArray) {
 
+  $scope.juniorChallengeRating = [];
+
   var ref = new Firebase("https://shining-fire-9962.firebaseio.com");
 
   var reviews = $firebaseObject(ref);
-  console.log(reviews);
+  // console.log(reviews);
 
   reviews.$bindTo($scope, "users");
+  // console.log(reviews);
 
-  $scope.juniorsChallengeRatings = [];
-
-  $scope.getAverage = function(){
-
+  $scope.getAverage = function(array){
+      $scope.a = 0;
+    array.forEach(function(ave){
+      $scope.a+=ave;
+    });
+    return ($scope.a)/(array.length);
+    // console.log($scope.juniorChallengeRating);
   };
 
-
   ref.on('child_added', function(dataSnapshot) {
-    var reviewsArray = $.map(reviews, function(value, index){
-      return [value];
-      console.log(reviewsArray);
-    });
+
+    if (dataSnapshot.val().cohort === "Nov 2015") {
+      $scope.juniorChallengeRating.push(dataSnapshot.val().challenge);
+      $scope.juniorChallengeAverage = $scope.getAverage($scope.juniorChallengeRating);
+    } else {
+      $scope.seniorChallengeRating.push(dataSnapshot.val().challenge);
+      $scope.seniorChallengeAverage = $scope.getAverage($scope.seniorChallengeRating);
+    }
+
   });
 
   // reviews.$loaded(function(data) {
