@@ -6,4 +6,12 @@ dailyReviewApp.controller('ToggleCtrl',['$scope', function($scope) {
     $scope.state = !$scope.state;
   };
 
+  $scope.hoverOn = function() {
+    this.showStats = true;
+  };
+
+  $scope.hoverNot = function() {
+    this.showStats = false;
+  };
+
 }]);

@@ -1,30 +1,18 @@
 
 
 
-<p ng-repeat="user in users">
-  {{user.name}}
-</p>
 
-<!-- <p>Junior Challenge Ratings: {{juniorChallengeRatings}}</p>
-<p>Junior Feeling Ratings: {{juniorFeelingRatings}}</p>
-<p>Junior Pairing Ratings: {{juniorPairingRatings}}</p>
-<br>
-<p>Senior Challenge Ratings: {{seniorChallengeRatings}}</p>
-<p>Senior Feeling Ratings: {{seniorFeelingRatings}}</p>
-<p>Senior Pairing Ratings: {{seniorPairingRatings}}</p> -->
-
-
-
-
-<!-- <div>
-  Average Pairing Rating: {{ getAverage(users) }}
-</div> -->
 
 
 <div class="sidebar-students" ng-controller="ToggleCtrl" sidebar-directive="state">
   <button id="navigation-toggle" ng-click="toggleState()"> Students </button>
   <ul class="students" ng-repeat="user in users">
-    <li class="student">
-      {{user.name}}
+    <li class="student" ng-mouseover="hoverOn()" ng-mouseleave="hoverNot()">
+      <p ng-show="!showStats"> {{user.name}}<p>
+      <div ng-show="showStats">
+        <p> Challenge: {{user.challenge}} </p>
+        <p> Pairing: {{user.pairing}} </p>
+        <p> Emotional Level: {{user.feeling}} </p>
+        <p> Confidence: {{user.confidence}} </p>
     </li>
 </div>
