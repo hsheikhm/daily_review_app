@@ -8,10 +8,19 @@ function($scope, $firebaseObject, $firebaseArray) {
 
   reviews.$bindTo($scope, "users");
 
-  $scope.users = [];
+  $scope.juniorsChallengeRatings = [];
+
+  $scope.getAverage = function(){
+
+  };
 
 
-
+  ref.on('child_added', function(dataSnapshot) {
+    var reviewsArray = $.map(reviews, function(value, index){
+      return [value];
+      console.log(reviewsArray);
+    });
+  });
 
   // reviews.$loaded(function(data) {
     //   angular.forEach(data, function(value, key) {

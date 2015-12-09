@@ -1,24 +1,22 @@
 
 
-
-<p ng-repeat="user in users">
-  {{user.name}}
-</p>
+<div class='row'>
+  <div class='col-md-offset-3 col-md-6' ng-repeat='user in users'>
+    <p>
+    {{user.name}}
+    {{user.challenge}}
+    </p>
+    <p>{{juniorsChallengeRatings}}</p>
+  </div>
+</div>
 
 <!-- <p>Junior Challenge Ratings: {{juniorChallengeRatings}}</p>
-<p>Junior Feeling Ratings: {{juniorFeelingRatings}}</p>
-<p>Junior Pairing Ratings: {{juniorPairingRatings}}</p>
-<br>
-<p>Senior Challenge Ratings: {{seniorChallengeRatings}}</p>
-<p>Senior Feeling Ratings: {{seniorFeelingRatings}}</p>
-<p>Senior Pairing Ratings: {{seniorPairingRatings}}</p> -->
-
-
-
-
-<!-- <div>
-  Average Pairing Rating: {{ getAverage(users) }}
-</div> -->
+  <p>Junior Feeling Ratings: {{juniorFeelingRatings}}</p>
+  <p>Junior Pairing Ratings: {{juniorPairingRatings}}</p>
+  <br>
+  <p>Senior Challenge Ratings: {{seniorChallengeRatings}}</p>
+  <p>Senior Feeling Ratings: {{seniorFeelingRatings}}</p>
+  <p>Senior Pairing Ratings: {{seniorPairingRatings}}</p> -->
 
 
 <div class="sidebar-students" ng-controller="ToggleCtrl" sidebar-directive="state">
