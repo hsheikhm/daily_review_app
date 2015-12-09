@@ -12,7 +12,7 @@
 
 .sidebar-students {
   position : absolute;
-  top: 300px;
+  top: 52px;
   left: -200px;
   transition : 100ms left;
 }
@@ -43,3 +43,8 @@
   text-decoration : none;
   padding : 10px 30px;
   width : 200px;
+}
+
+.user-info{
+
+}

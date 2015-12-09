@@ -26,10 +26,12 @@
   <ul class="students" ng-repeat="user in users">
     <li class="student" ng-mouseover="hoverOn()" ng-mouseleave="hoverNot()">
       <p ng-show="!showStats"> {{user.name}}<p>
-      <div ng-show="showStats">
+      <div class="details"ng-show="showStats">
         <p> Challenge: {{user.challenge}} </p>
         <p> Pairing: {{user.pairing}} </p>
         <p> Emotional Level: {{user.feeling}} </p>
         <p> Confidence: {{user.confidence}} </p>
+      </div>
     </li>
+  </ul>
 </div>
