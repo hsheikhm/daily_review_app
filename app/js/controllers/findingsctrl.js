@@ -4,6 +4,7 @@ function($scope, $firebaseObject, $firebaseArray) {
   var ref = new Firebase("https://shining-fire-9962.firebaseio.com");
 
   var reviews = $firebaseObject(ref);
+  console.log(reviews);
 
   reviews.$bindTo($scope, "users");
 

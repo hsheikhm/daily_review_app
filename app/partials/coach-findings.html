@@ -1,8 +1,8 @@
 
 
 
-<p ng-repeat="(key, user) in users">
-  {{key}}
+<p ng-repeat="user in users">
+  {{user.name}}
 </p>
 
 <!-- <p>Junior Challenge Ratings: {{juniorChallengeRatings}}</p>
@@ -21,10 +21,10 @@
 </div> -->
 
 
-<!-- <div class="sidebar-students" ng-controller="ToggleCtrl" sidebar-directive="state">
+<div class="sidebar-students" ng-controller="ToggleCtrl" sidebar-directive="state">
   <button id="navigation-toggle" ng-click="toggleState()"> Students </button>
-  <ul class="students">
+  <ul class="students" ng-repeat="user in users">
     <li class="student">
-      Chuka
+      {{user.name}}
     </li>
-</div> -->
+</div>
