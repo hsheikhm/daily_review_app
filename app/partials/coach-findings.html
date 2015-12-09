@@ -3,15 +3,26 @@
   {{cohort}}
 </p>
 
+<p>Junior Challenge Ratings: {{juniorChallengeRatings}}</p>
+<p>Junior Feeling Ratings: {{juniorFeelingRatings}}</p>
+<p>Junior Pairing Ratings: {{juniorPairingRatings}}</p>
+<br>
+<p>Senior Challenge Ratings: {{seniorChallengeRatings}}</p>
+<p>Senior Feeling Ratings: {{seniorFeelingRatings}}</p>
+<p>Senior Pairing Ratings: {{seniorPairingRatings}}</p>
 
 
 
 
+<div>
+  Average Pairing Rating: {{ getAverage(users) }}
+</div>
 
-<div class="sidebar-students" ng-controller="ToggleCtrl" sidebar-directive="state">
+
+<!-- <div class="sidebar-students" ng-controller="ToggleCtrl" sidebar-directive="state">
   <button id="navigation-toggle" ng-click="toggleState()"> Students </button>
   <ul class="students">
     <li class="student">
       Chuka
     </li>
-</div>
+</div> -->
