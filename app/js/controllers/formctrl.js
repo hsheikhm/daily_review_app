@@ -2,7 +2,6 @@ dailyReviewApp.controller('FormCtrl', ['$scope', '$rootScope', '$filter',
   function($scope, $rootScope, $filter) {
 
       var ref = new Firebase("https://shining-fire-9962.firebaseio.com");
-      var cohortsRef = ref.child("cohorts");
 
       $scope.addReview = function() {
         ref.child($rootScope.userName).push({
@@ -22,7 +21,6 @@ dailyReviewApp.controller('FormCtrl', ['$scope', '$rootScope', '$filter',
           $scope.confidence = '';
           $scope.comments = '';
         };
-
     }]);
 
 

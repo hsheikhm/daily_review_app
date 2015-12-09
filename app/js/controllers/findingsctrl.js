@@ -2,23 +2,41 @@ dailyReviewApp.controller('FindingsCtrl', ['$scope', '$firebaseObject', '$fireba
   function($scope, $firebaseObject, $firebaseArray) {
 
       var ref = new Firebase("https://shining-fire-9962.firebaseio.com");
+      var usersRef = ref.child();
 
-      var fullDataObj = $firebaseObject(ref);
+      var reviews = $firebaseObject(ref);
+
+      reviews.$bindTo($scope, "users");
+      console.log(reviews);
+      $scope.users = [];
 
 
 
-      $scope.getAverage = function(array) {
-        var total = 0;
-        for(var i = 0; i < array.length; i++) {
-          total += array[i].pairing;
-        }
-        var avg = total / array.length;
-        return avg;
-      };
 
+      // reviews.$loaded(function(data) {
+      //   angular.forEach(data, function(value, key) {
+      //     angular.forEach(value, function(val, ky) {
+      //       $scope.users.push(val);
+      //     });
+      //   });
+      // });
+
+
+      // ref.on('child_added', function(childSnapshot, prevChildKey) {
+      //   console.log(childSnapshot);
+      // });
 
 
   }]);
+
+  // $scope.getAverage = function(array) {
+  //   var total = 0;
+  //   for(var i = 0; i < array.length; i++) {
+  //     total += array[i].pairing;
+  //   }
+  //   var avg = total / array.length;
+  //   return avg;
+  // };
 
   // fullDataObj.$bindTo($scope, "data");
 

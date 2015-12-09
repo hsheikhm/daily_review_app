@@ -1,22 +1,24 @@
 
-<p ng-repeat="cohort in cohorts">
-  {{cohort}}
+
+
+<p ng-repeat="(key, user) in users">
+  {{user['$id']}}
 </p>
 
-<p>Junior Challenge Ratings: {{juniorChallengeRatings}}</p>
+<!-- <p>Junior Challenge Ratings: {{juniorChallengeRatings}}</p>
 <p>Junior Feeling Ratings: {{juniorFeelingRatings}}</p>
 <p>Junior Pairing Ratings: {{juniorPairingRatings}}</p>
 <br>
 <p>Senior Challenge Ratings: {{seniorChallengeRatings}}</p>
 <p>Senior Feeling Ratings: {{seniorFeelingRatings}}</p>
-<p>Senior Pairing Ratings: {{seniorPairingRatings}}</p>
+<p>Senior Pairing Ratings: {{seniorPairingRatings}}</p> -->
 
 
 
 
-<div>
+<!-- <div>
   Average Pairing Rating: {{ getAverage(users) }}
-</div>
+</div> -->
 
 
 <!-- <div class="sidebar-students" ng-controller="ToggleCtrl" sidebar-directive="state">
