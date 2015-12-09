@@ -15,6 +15,10 @@ function($scope, $firebaseObject, $firebaseArray) {
   $scope.seniorConfidenceYes = [];
   $scope.seniorConfidenceNo = [];
 
+  $scope.show = function(cohort) {
+    $scope.select = cohort;
+  };
+
 
   var ref = new Firebase("https://shining-fire-9962.firebaseio.com");
 
