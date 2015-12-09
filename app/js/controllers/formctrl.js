@@ -4,11 +4,9 @@ dailyReviewApp.controller('FormCtrl', ['$scope', '$rootScope', '$filter',
       var ref = new Firebase("https://shining-fire-9962.firebaseio.com");
       var cohortsRef = ref.child("cohorts");
 
-
-
       $scope.addReview = function() {
-        ref.child($rootScope.userEmail || $rootScope.userName).push({
-          name: $rootScope.userEmail || $rootScope.userName,
+        ref.child($rootScope.userName).push({
+          name: $rootScope.userName,
           cohort: $scope.cohort,
           pairing: $scope.pairing,
           challenge: $scope.challenge,
