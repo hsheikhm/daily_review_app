@@ -144,6 +144,12 @@ label {
     border-color: #AA1925;
 }
 
+ .sad {
+   color: #AA1925;
+   font-weight: bold;
+   font-size: 150%;
+ }
+
 .btn.btn-primary {
   background-color: #AA1925 !important;
   border-color: #AA1925 !important;
