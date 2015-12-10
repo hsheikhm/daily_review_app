@@ -14,7 +14,7 @@ dailyReviewApp.controller('FormCtrl', ['$scope', '$rootScope', '$filter',
           feeling: $scope.feeling,
           feelingExtra: $scope.feelingExtra || '',
           confidence: $scope.confidence,
-          comments: $scope.comments,
+          comments: $scope.comments || '',
           date: $filter('date')(new Date(), 'dd-MM-yy')
         });
           $scope.cohort = '';

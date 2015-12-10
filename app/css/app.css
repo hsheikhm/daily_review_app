@@ -1,3 +1,14 @@
+body {
+  background-color: #FFFFFF !important;
+  /*background-image: url("images/makersacademy.png") !important;*/
+  /*background-size: cover;*/
+  /*background-blend-mode: hue;*/
+}
+
+label {
+  color: #AA1925;
+}
+
 .form {
   width: 500px;
 }
@@ -45,6 +56,39 @@
   width : 200px;
 }
 
+.navbar-brand {
+  font-family: "futura-pt", Futura, "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  font-weight: 500;
+}
 
+.navbar-inverse {
+  background-color: #00333F !important;
+  border-color: #00333F !important;
+}
 
+.navbar-inverse .navbar-brand {
+  color: #FFFFFF !important;
+}
 
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFFFFF !important;
+}
+
+.btn.btn-block.btn-primary {
+  background-color: #AA1925;
+  border-color: #AA1925;
+}
+
+.pagination > li > span {
+  border: 0px solid !important;
+  background-color: #FFFFFF !important;
+  left: 1px;
+  font-size: 17px;
+}
+
+.extra-input {
+  width: 355px;
+}
