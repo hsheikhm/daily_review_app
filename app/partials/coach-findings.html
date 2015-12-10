@@ -47,7 +47,7 @@
   <button id="navigation-toggle" ng-click="toggleState()"> Students </button>
   <ul class="students" ng-repeat="user in users">
     <li class="student" ng-mouseover="hoverOn()" ng-mouseleave="hoverNot()">
-      <p> {{user.name}}<p>
+      <p ng-class="{sad: user.feeling < 3 }"> {{user.name}}<p>
       <div class="details" ng-show="showStats">
         <p> Challenge: {{user.challenge}} </p>
         <p> Pairing: {{user.pairing}} </p>
