@@ -184,9 +184,15 @@ label {
   border-color: #AA1925;
   margin-right: 12px;
 }
+
 .rating-title {
   font-size: 19px;
-  margin-top: 173px;
+  margin-top: 20px;
   color: #AA1925;
   font-weight: 600;
+}
+
+.number {
+  margin-top: 41px;
+  font-size: 96px;
 }
