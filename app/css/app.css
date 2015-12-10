@@ -1,16 +1,31 @@
 body {
-  /*background-color: #FFFFFF !important;*/
   background-image: url("images/students-by-windows.jpg") !important;
+  flex: 1;
+  /*background-repeat: no-repeat;*/
   background-size: cover;
+}
+
+.custom-header {
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 h2 {
   color: #FFFFFF;
 }
 
+
 label {
   color: #FFFFFF;
   font-size: 17px;
+}
+
+.logo {
+  height: 22px;
+  margin-top: 14px;
+  float: left;
+  padding-right: 16px;
 }
 
 .alert-success {
@@ -40,12 +55,12 @@ label {
 }
 
 #navigation-toggle {
-  position : absolute;
-  left : 200px;
-  background : rgba(3,159,244,.95);
-  color : white;
-  text-decoration : none;
-  padding : 20px;
+  position: absolute;
+  left: 200px;
+  background: #00333F;
+  color: #EFF7F2;
+  text-decoration: none;
+  padding: 20px;
 }
 
 .show {
@@ -57,14 +72,15 @@ label {
   padding : 0;
   margin : 0;
 }
+
 .student  {
-  display : block;
-  color: white;
-  background-color : #444;
-  line-height : 2em;
-  text-decoration : none;
-  padding : 10px 30px;
-  width : 200px;
+  display: block;
+  color: #062533;
+  background-color: #EFF7F2;
+  line-height: 2em;
+  text-decoration: none;
+  padding: 10px 30px;
+  width: 200px;
 }
 
 .navbar-brand {
@@ -128,8 +144,43 @@ label {
     border-color: #AA1925;
 }
 
-
 .btn.btn-primary {
   background-color: #AA1925 !important;
   border-color: #AA1925 !important;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #FFFFFF !important
+  font-family: "futura-pt", Futura, "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  text-rendering: optimizeLegibility !important;
+  font-weight: 500 !important;
+}
+
+.rating {
+  height: 237px;
+  width: 279px;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  text-align: center;
+  margin: 12px;
+  opacity: 0.5;
+}
+
+.cohort-div {
+  text-align: center;
+}
+
+.cohort-button {
+  color: #fff;
+  background-color: #AA1925;
+  border-color: #AA1925;
+  margin-right: 12px;
+}
+.rating-title {
+  font-size: 19px;
+  margin-top: 173px;
+  color: #AA1925;
+  font-weight: 600;
 }

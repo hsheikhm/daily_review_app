@@ -1,44 +1,74 @@
 <div class='row'>
 
-  <div class='col-md-offset-3 col-md-6'>
-    <button class="btn btn-success" type="button" ng-click="show('juniors')">Juniors</button>
-    <button class="btn btn-info" type="button" ng-click="show('seniors')">Seniors</button>
+  <div class='col-md-offset-3 col-md-6 cohort-div'>
+    <button class="btn btn-success cohort-button" type="button" ng-click="show('juniors')">Juniors</button>
+    <button class="btn btn-info cohort-button" type="button" ng-click="show('seniors')">Seniors</button>
   </div>
 
   <div class='col-md-offset-3 col-md-6'>
 
-    <div ng-show="select === 'juniors'">
-      <h2>Juniors Average Ratings</h2>
-      <div>
-        <p>Junior Challenge Average: {{juniorChallengeAverage | number: 1}}</p>
+    <div class="row" ng-show="select === 'juniors'">
+      <h2 class="custom-header">Juniors Average Ratings</h2>
+    <div class="row">
+      <div class="col-md-6 rating">
+        <div>
+          <p>{{juniorPairingAverage | number: 1}}</p>
+          <p class="rating-title">Junior Pairing Average</p>
+        </div>
       </div>
-      <div>
-        <p>Junior Feeling Average: {{juniorFeelingAverage | number: 1}}</p>
-      </div>
-      <div>
-        <p>Junior Pairing Average: {{juniorPairingAverage | number: 1}}</p>
-      </div>
-      <div>
-        <p>Junior Confidence Average: {{juniorConfidenceAverage}}</p>
-      </div>
-    </div>
-
-    <div ng-show="select === 'seniors'">
-      <h2>Seniors Average Ratings</h2>
-      <div>
-        <p>Senior Challenge Average: {{seniorChallengeAverage | number: 1}}</p>
-      </div>
-      <div>
-        <p>Senior Feeling Average: {{seniorFeelingAverage | number: 1}}</p>
-      </div>
-      <div>
-        <p>Senior Pairing Average: {{seniorPairingAverage | number: 1}}</p>
-      </div>
-      <div>
-        <p>Senior Confidence Average: {{seniorConfidenceAverage}}</p>
+      <div class="col-md-6 rating">
+        <div>
+          <p>{{juniorChallengeAverage | number: 1}}</p>
+          <p class="rating-title">Junior Challenge Average</p>
+        </div>
       </div>
     </div>
+    <div class="row">
+        <div class="col-md-6 rating">
+          <div>
+            <p>{{juniorFeelingAverage | number: 1}}</p>
+            <p class="rating-title">Junior Feeling Average</p>
+          </div>
+        </div>
+        <div class="col-md-6 rating">
+          <div>
+            <p>{{juniorConfidenceAverage}}</p>
+            <p class="rating-title">Junior Confidence Average</p>
+          </div>
+        </div>
+    </div>
+  </div>
 
+  <div class="row" ng-show="select === 'seniors'">
+      <h2 class="custom-header">Seniors Average Ratings</h2>
+    <div class="row">
+      <div class="col-md-6 rating">
+        <div>
+          <p>{{seniorChallengeAverage | number: 1}}</p>
+          <p class="rating-title">Senior Challenge Average</p>
+        </div>
+      </div>
+      <div class="col-md-6 rating">
+        <div>
+          <p>{{seniorFeelingAverage | number: 1}}</p>
+          <p class="rating-title">Senior Feeling Average</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 rating">
+        <div>
+          <p>{{seniorPairingAverage | number: 1}}</p>
+          <p class="rating-title">Senior Pairing Average</p>
+        </div>
+      </div>
+      <div class="col-md-6 rating">
+        <div>
+          <p>{{seniorConfidenceAverage}}</p>
+          <p class="rating-title">Senior Confidence Average</p>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
