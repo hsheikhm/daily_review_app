@@ -6,7 +6,7 @@ dailyReviewApp.factory('RatingFactory', function() {
     this.confidenceYes = [];
     this.confidenceNo = [];
 
-    this.collectJuniorRatings = function(dataSnapshot) {
+    this.collectRatings = function(dataSnapshot) {
       this.challengeRating.push(dataSnapshot.val().challenge);
       this.feelingRating.push(dataSnapshot.val().feeling);
       this.pairingRating.push(dataSnapshot.val().pairing);
@@ -16,6 +16,10 @@ dailyReviewApp.factory('RatingFactory', function() {
       } else if (dataSnapshot.val().confidence === "No") {
         this.confidenceNo.push(dataSnapshot.val().confidence);
       }
+    };
+
+    this.moreConfident = function() {
+      return this.confidenceYes.length >= this.confidenceNo.length;
     };
   }
 
