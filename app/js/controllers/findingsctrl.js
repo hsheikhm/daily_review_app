@@ -30,16 +30,10 @@ function($scope, $firebaseObject, RatingFactory) {
   };
 
   $scope.updateConfidenceAverages = function() {
-    if(junior.moreConfident()) {
-      $scope.juniorConfidenceAverage = "Yes";
-    } else {
-      $scope.juniorConfidenceAverage = "No";
-    }
-    if(senior.moreConfident()) {
-      $scope.seniorConfidenceAverage = "Yes";
-    } else {
-      $scope.seniorConfidenceAverage = "No";
-    }
+    if (junior.moreConfident()) { $scope.juniorConfidenceAverage = "Yes"; }
+    else { $scope.juniorConfidenceAverage = "No"; }
+    if (senior.moreConfident()) { $scope.seniorConfidenceAverage = "Yes"; }
+    else { $scope.seniorConfidenceAverage = "No"; }
   };
 
   ref.on('child_added', function(dataSnapshot) {
@@ -48,7 +42,6 @@ function($scope, $firebaseObject, RatingFactory) {
     } else if (dataSnapshot.val().cohort === "Oct 2015") {
       senior.collectRatings(dataSnapshot);
     }
-    $scope.updateAverages();
-    $scope.updateConfidenceAverages();
+    $scope.updateAverages(); $scope.updateConfidenceAverages();
   });
 }]);
