@@ -1,17 +1,18 @@
-dailyReviewApp.controller('ToggleCtrl',['$scope', function($scope) {
+dailyReviewApp.controller('ToggleCtrl', ['$scope',
+  function($scope) {
 
-  $scope.state = false;
+    $scope.state = false;
 
-  $scope.toggleState = function() {
-    $scope.state = !$scope.state;
-  };
+    $scope.toggleState = function() {
+      $scope.state = !$scope.state;
+    };
 
-  $scope.hoverOn = function() {
-    this.showStats = true;
-  };
+    $scope.hoverOn = function() {
+      this.showStats = true;
+    };
 
-  $scope.hoverNot = function() {
-    this.showStats = false;
-  };
+    $scope.hoverNot = function() {
+      this.showStats = false;
+    };
 
 }]);
