@@ -2,32 +2,12 @@
   <div class='col-md-6 col-md-offset-3'>
     <form ng-submit='addReview()' ng-hide='done'>
       <div class='form-group'>
-        <label for="cohort">Which Cohort are you in?</label>
-        <br>
-        <ul class="pagination">
-          <li ng-class="{active: cohort === 'Oct 2015'}"><a ng-click="cohort = 'Oct 2015'" href>Oct 2015 <span class="sr-only">(current)</span></a></li>
-          <li ng-class="{active: cohort === 'Nov 2015'}"><a ng-click="cohort = 'Nov 2015'" href>Nov 2015 <span class="sr-only">(current)</span></a></li>
-        </ul>
+        <cohort-question></cohort-question>
       </div>
 
       <div class='form-group'>
-        <label for="pairing">How was pairing today?</label>
-        <br>
-        <ul class="pagination">
-          <li><span class="glyphicon glyphicon-thumbs-down thumb"></span></li>
-          <li ng-class="{active: pairing === 1}"><a ng-click="pairing = 1" href>1 <span class="sr-only">(current)</span></a></li>
-          <li ng-class="{active: pairing === 2}"><a ng-click="pairing = 2" href>2 <span class="sr-only">(current)</span></a></li>
-          <li ng-class="{active: pairing === 3}"><a ng-click="pairing = 3" href>3 <span class="sr-only">(current)</span></a></li>
-          <li ng-class="{active: pairing === 4}"><a ng-click="pairing = 4" href>4 <span class="sr-only">(current)</span></a></li>
-          <li ng-class="{active: pairing === 5}"><a ng-click="pairing = 5" href>5 <span class="sr-only">(current)</span></a></li>
-          <li><span class="glyphicon glyphicon-thumbs-up"></span></li>
-        </ul>
-        <div class="form-group" ng-show="pairing < 3">
-          <label for="pairing-extra"><span class="glyphicon glyphicon-asterisk"></span> Any particular reason?</label>
-          <input type="text" ng-model="pairingExtra" class="extra-input">
-        </div>
+        <pairing-question></pairing-question>
       </div>
-
 
       <div class='form-group'>
         <label for="challenge">How do you feel about the challenge so far?</label>

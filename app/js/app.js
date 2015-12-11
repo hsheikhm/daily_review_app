@@ -22,4 +22,4 @@ dailyReviewApp.config(['$routeProvider',
       otherwise({
         redirectTo: '/'
       });
-  }]);
+}]);

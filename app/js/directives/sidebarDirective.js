@@ -10,4 +10,4 @@ dailyReviewApp.directive('sidebarDirective', function() {
         });
       }
     };
-  });
+});
