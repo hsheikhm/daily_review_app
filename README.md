@@ -23,7 +23,24 @@ change the ref variables in controllers to point to your database url
 ```
 
 ####What is the project?
-
+```
+Students at Makers Academy fill in a review form everyday, which gets stored on
+a database and displayed onto the coaches review page via data visualisation. Coaches can then understand
+how students are feeling.
+```
+####How it works?
+```
+Slackbot sends a message with the web app url to individual students 
+A student fills in the form and clicks submit.
+Coaches log in to the web app and they are shown the data collected from the
+form.
+```
+####Technologies used?
+```
+Angular/HTML/CSS for front end development.
+NodeJS/Firebase for back end.
+Slackbot API.
+```
 
 ####Contributors
 Chuka Ebi, Hamza Sheikh, Mahmud Hussain.
