@@ -4,9 +4,8 @@ function($scope, $firebaseObject, RatingFactory) {
   var junior = new RatingFactory();
   var senior = new RatingFactory();
 
-  $scope.juniorConfidenceYes = [];
+
   $scope.juniorConfidenceNo = [];
-  $scope.seniorConfidenceYes = [];
   $scope.seniorConfidenceNo = [];
 
   $scope.show = function(cohort) {
@@ -35,9 +34,9 @@ function($scope, $firebaseObject, RatingFactory) {
       junior.pairingRating.push(dataSnapshot.val().pairing);
 
         if(dataSnapshot.val().confidence === "Yes") {
-          $scope.juniorConfidenceYes.push(dataSnapshot.val().confidence);
+          junior.confidenceYes.push(dataSnapshot.val().confidence);
         } else if (dataSnapshot.val().confidence === "No") {
-          $scope.juniorConfidenceNo.push(dataSnapshot.val().confidence);
+          junior.confidenceNo.push(dataSnapshot.val().confidence);
         }
 
     } else if (dataSnapshot.val().cohort === "Oct 2015") {
@@ -46,9 +45,9 @@ function($scope, $firebaseObject, RatingFactory) {
       senior.pairingRating.push(dataSnapshot.val().pairing);
 
         if(dataSnapshot.val().confidence === "Yes") {
-          $scope.seniorConfidenceYes.push(dataSnapshot.val().confidence);
+          senior.confidenceYes.push(dataSnapshot.val().confidence);
         } else if (dataSnapshot.val().confidence === "No") {
-          $scope.seniorConfidenceNo.push(dataSnapshot.val().confidence);
+          senior.confidenceNo.push(dataSnapshot.val().confidence);
         }
 
     }
@@ -59,12 +58,12 @@ function($scope, $firebaseObject, RatingFactory) {
       $scope.seniorPairingAverage = $scope.getAverage(senior.pairingRating);
       $scope.juniorPairingAverage = $scope.getAverage(junior.pairingRating);
 
-        if($scope.juniorConfidenceYes.length >= $scope.juniorConfidenceNo.length) {
+        if(junior.confidenceYes.length >= junior.confidenceNo.length) {
           $scope.juniorConfidenceAverage = "Yes";
         } else {
           $scope.juniorConfidenceAverage = "No";
         }
-        if($scope.seniorConfidenceYes.length >= $scope.seniorConfidenceNo.length) {
+        if(senior.confidenceYes.length >= senior.confidenceNo.length) {
           $scope.seniorConfidenceAverage = "Yes";
         } else {
           $scope.seniorConfidenceAverage = "No";
