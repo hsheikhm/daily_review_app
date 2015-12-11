@@ -31,6 +31,5 @@ dailyReviewApp.controller('FormCtrl', ['$scope', '$rootScope', '$filter',
 
         $scope.thankYou = function() {
           $scope.done = true;
-          if($scope.done) console.log("works");
         };
     }]);

@@ -1,14 +1,8 @@
-dailyReviewApp.controller('FindingsCtrl', ['$scope', '$firebaseObject',
-function($scope, $firebaseObject) {
+dailyReviewApp.controller('FindingsCtrl', ['$scope', '$firebaseObject', 'RatingFactory',
+function($scope, $firebaseObject, RatingFactory) {
 
-  $scope.juniorChallengeRating = [];
-  $scope.seniorChallengeRating = [];
-
-  $scope.juniorFeelingRating = [];
-  $scope.seniorFeelingRating = [];
-
-  $scope.juniorPairingRating = [];
-  $scope.seniorPairingRating = [];
+  var junior = new RatingFactory();
+  var senior = new RatingFactory();
 
   $scope.juniorConfidenceYes = [];
   $scope.juniorConfidenceNo = [];
@@ -36,9 +30,9 @@ function($scope, $firebaseObject) {
 
   ref.on('child_added', function(dataSnapshot) {
     if (dataSnapshot.val().cohort === "Nov 2015") {
-      $scope.juniorChallengeRating.push(dataSnapshot.val().challenge);
-      $scope.juniorFeelingRating.push(dataSnapshot.val().feeling);
-      $scope.juniorPairingRating.push(dataSnapshot.val().pairing);
+      junior.challengeRating.push(dataSnapshot.val().challenge);
+      junior.feelingRating.push(dataSnapshot.val().feeling);
+      junior.pairingRating.push(dataSnapshot.val().pairing);
 
         if(dataSnapshot.val().confidence === "Yes") {
           $scope.juniorConfidenceYes.push(dataSnapshot.val().confidence);
@@ -47,9 +41,9 @@ function($scope, $firebaseObject) {
         }
 
     } else if (dataSnapshot.val().cohort === "Oct 2015") {
-      $scope.seniorChallengeRating.push(dataSnapshot.val().challenge);
-      $scope.seniorFeelingRating.push(dataSnapshot.val().feeling);
-      $scope.seniorPairingRating.push(dataSnapshot.val().pairing);
+      senior.challengeRating.push(dataSnapshot.val().challenge);
+      senior.feelingRating.push(dataSnapshot.val().feeling);
+      senior.pairingRating.push(dataSnapshot.val().pairing);
 
         if(dataSnapshot.val().confidence === "Yes") {
           $scope.seniorConfidenceYes.push(dataSnapshot.val().confidence);
@@ -58,12 +52,12 @@ function($scope, $firebaseObject) {
         }
 
     }
-      $scope.seniorChallengeAverage = $scope.getAverage($scope.seniorChallengeRating);
-      $scope.juniorChallengeAverage = $scope.getAverage($scope.juniorChallengeRating);
-      $scope.seniorFeelingAverage = $scope.getAverage($scope.seniorFeelingRating);
-      $scope.juniorFeelingAverage = $scope.getAverage($scope.juniorFeelingRating);
-      $scope.seniorPairingAverage = $scope.getAverage($scope.seniorPairingRating);
-      $scope.juniorPairingAverage = $scope.getAverage($scope.juniorPairingRating);
+      $scope.seniorChallengeAverage = $scope.getAverage(senior.challengeRating);
+      $scope.juniorChallengeAverage = $scope.getAverage(junior.challengeRating);
+      $scope.seniorFeelingAverage = $scope.getAverage(senior.feelingRating);
+      $scope.juniorFeelingAverage = $scope.getAverage(junior.feelingRating);
+      $scope.seniorPairingAverage = $scope.getAverage(senior.pairingRating);
+      $scope.juniorPairingAverage = $scope.getAverage(junior.pairingRating);
 
         if($scope.juniorConfidenceYes.length >= $scope.juniorConfidenceNo.length) {
           $scope.juniorConfidenceAverage = "Yes";
