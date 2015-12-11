@@ -17,19 +17,9 @@ dailyReviewApp.controller('FormCtrl', ['$scope', '$rootScope', '$filter',
           comments: $scope.comments || '',
           date: $filter('date')(new Date(), 'dd-MM-yy')
         });
-          $scope.cohort = '';
-          $scope.name = '';
-          $scope.pairing = '';
-          $scope.challenge = '';
-          $scope.feeling = '';
-          $scope.confidence = '';
-          $scope.comments = '';
-          $scope.pairingExtra = '';
-          $scope.challengeExtra = '';
-          $scope.feelingExtra = '';
-        };
+      };
 
-        $scope.thankYou = function() {
+      $scope.thankYou = function() {
           $scope.done = true;
-        };
+      };
     }]);
