@@ -1,5 +1,5 @@
-dailyReviewApp.controller('FindingsCtrl', ['$scope', '$firebaseObject', '$firebaseArray',
-function($scope, $firebaseObject, $firebaseArray) {
+dailyReviewApp.controller('FindingsCtrl', ['$scope', '$firebaseObject',
+function($scope, $firebaseObject) {
 
   $scope.juniorChallengeRating = [];
   $scope.seniorChallengeRating = [];
