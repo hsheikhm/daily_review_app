@@ -1,0 +1,15 @@
+<label for="challenge">How do you feel about the challenge so far?</label>
+<br>
+<ul class="pagination">
+  <li><span class="glyphicon glyphicon-thumbs-down"></span></li>
+  <li ng-class="{active: challenge === 1}"><a ng-click="challenge = 1" href>1 <span class="sr-only">(current)</span></a></li>
+  <li ng-class="{active: challenge === 2}"><a ng-click="challenge = 2" href>2 <span class="sr-only">(current)</span></a></li>
+  <li ng-class="{active: challenge === 3}"><a ng-click="challenge = 3" href>3 <span class="sr-only">(current)</span></a></li>
+  <li ng-class="{active: challenge === 4}"><a ng-click="challenge = 4" href>4 <span class="sr-only">(current)</span></a></li>
+  <li ng-class="{active: challenge === 5}"><a ng-click="challenge = 5" href>5 <span class="sr-only">(current)</span></a></li>
+  <li><span class="glyphicon glyphicon-thumbs-up"></span></li>
+</ul>
+<div class="form-group" ng-show="challenge < 3">
+  <label for="challenge-extra"><span class="glyphicon glyphicon-asterisk"></span> Any particular reason?</label>
+  <input type="text" ng-model="challengeExtra" class="extra-input">
+</div>

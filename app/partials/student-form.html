@@ -10,54 +10,19 @@
       </div>
 
       <div class='form-group'>
-        <label for="challenge">How do you feel about the challenge so far?</label>
-        <br>
-        <ul class="pagination">
-          <li><span class="glyphicon glyphicon-thumbs-down"></span></li>
-          <li ng-class="{active: challenge === 1}"><a ng-click="challenge = 1" href>1 <span class="sr-only">(current)</span></a></li>
-          <li ng-class="{active: challenge === 2}"><a ng-click="challenge = 2" href>2 <span class="sr-only">(current)</span></a></li>
-          <li ng-class="{active: challenge === 3}"><a ng-click="challenge = 3" href>3 <span class="sr-only">(current)</span></a></li>
-          <li ng-class="{active: challenge === 4}"><a ng-click="challenge = 4" href>4 <span class="sr-only">(current)</span></a></li>
-          <li ng-class="{active: challenge === 5}"><a ng-click="challenge = 5" href>5 <span class="sr-only">(current)</span></a></li>
-          <li><span class="glyphicon glyphicon-thumbs-up"></span></li>
-        </ul>
-        <div class="form-group" ng-show="challenge < 3">
-          <label for="challenge-extra"><span class="glyphicon glyphicon-asterisk"></span> Any particular reason?</label>
-          <input type="text" ng-model="challengeExtra" class="extra-input">
-        </div>
+        <challenge-question></challenge-question>
       </div>
 
       <div class='form-group'>
-        <label for="confidence">Do you feel confident that you will finish the challenge?</label>
-        <br>
-        <ul class="pagination">
-          <li ng-class="{active: confidence === 'Yes'}"><a ng-click="confidence = 'Yes'" href>Yes <span class="sr-only">(current)</span></a></li>
-          <li ng-class="{active: confidence === 'No'}"><a ng-click="confidence = 'No'" href>No <span class="sr-only">(current)</span></a></li>
-        </ul>
+        <confidence-question></confidence-question>
       </div>
 
       <div class='form-group'>
-        <label for="feeling">How is your mood today?</label>
-        <br>
-        <ul class="pagination">
-          <li><span class="glyphicon glyphicon-thumbs-down"></span></li>
-          <li ng-class="{active: feeling === 1}"><a ng-click="feeling = 1" href>1 <span class="sr-only">(current)</span></a></li>
-          <li ng-class="{active: feeling === 2}"><a ng-click="feeling = 2" href>2 <span class="sr-only">(current)</span></a></li>
-          <li ng-class="{active: feeling === 3}"><a ng-click="feeling = 3" href>3 <span class="sr-only">(current)</span></a></li>
-          <li ng-class="{active: feeling === 4}"><a ng-click="feeling = 4" href>4 <span class="sr-only">(current)</span></a></li>
-          <li ng-class="{active: feeling === 5}"><a ng-click="feeling = 5" href>5 <span class="sr-only">(current)</span></a></li>
-          <li><span class="glyphicon glyphicon-thumbs-up"></span></li>
-        </ul>
-        <div class="form-group" ng-show="feeling < 3">
-          <label for="feeling-extra"><span class="glyphicon glyphicon-asterisk"></span> How can we help?</label>
-          <input type="text" ng-model="feelingExtra" class="extra-input">
-        </div>
+        <feeling-question></feeling-question>
       </div>
 
       <div class='form-group'>
-        <label for="comments">Additional Comments:</label>
-        <br>
-          <textarea rows="4" cols="60" ng-model="comments" placeholder="Enter Comments"></textarea>
+        <comments-question></comments-question>
       </div>
       <input type='submit' class='btn btn-primary' value='Submit' ng-click="thankYou()">
     </form>

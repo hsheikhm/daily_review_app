@@ -1,0 +1,15 @@
+<label for="feeling">How is your mood today?</label>
+<br>
+<ul class="pagination">
+  <li><span class="glyphicon glyphicon-thumbs-down"></span></li>
+  <li ng-class="{active: feeling === 1}"><a ng-click="feeling = 1" href>1 <span class="sr-only">(current)</span></a></li>
+  <li ng-class="{active: feeling === 2}"><a ng-click="feeling = 2" href>2 <span class="sr-only">(current)</span></a></li>
+  <li ng-class="{active: feeling === 3}"><a ng-click="feeling = 3" href>3 <span class="sr-only">(current)</span></a></li>
+  <li ng-class="{active: feeling === 4}"><a ng-click="feeling = 4" href>4 <span class="sr-only">(current)</span></a></li>
+  <li ng-class="{active: feeling === 5}"><a ng-click="feeling = 5" href>5 <span class="sr-only">(current)</span></a></li>
+  <li><span class="glyphicon glyphicon-thumbs-up"></span></li>
+</ul>
+<div class="form-group" ng-show="feeling < 3">
+  <label for="feeling-extra"><span class="glyphicon glyphicon-asterisk"></span> How can we help?</label>
+  <input type="text" ng-model="feelingExtra" class="extra-input">
+</div>
