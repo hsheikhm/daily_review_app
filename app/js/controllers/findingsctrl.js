@@ -1,23 +1,16 @@
 dailyReviewApp.controller('FindingsCtrl', ['$scope', '$firebaseObject', 'RatingFactory',
 function($scope, $firebaseObject, RatingFactory) {
 
+  var ref = new Firebase("https://shining-fire-9962.firebaseio.com");
+  var reviews = $firebaseObject(ref);
+  reviews.$bindTo($scope, "users");
+
   var junior = new RatingFactory();
   var senior = new RatingFactory();
-
-
-  $scope.juniorConfidenceNo = [];
-  $scope.seniorConfidenceNo = [];
 
   $scope.show = function(cohort) {
     $scope.select = cohort;
   };
-
-
-  var ref = new Firebase("https://shining-fire-9962.firebaseio.com");
-
-  var reviews = $firebaseObject(ref);
-
-  reviews.$bindTo($scope, "users");
 
   $scope.getAverage = function(array){
       $scope.a = 0;
@@ -29,15 +22,7 @@ function($scope, $firebaseObject, RatingFactory) {
 
   ref.on('child_added', function(dataSnapshot) {
     if (dataSnapshot.val().cohort === "Nov 2015") {
-      junior.challengeRating.push(dataSnapshot.val().challenge);
-      junior.feelingRating.push(dataSnapshot.val().feeling);
-      junior.pairingRating.push(dataSnapshot.val().pairing);
-
-        if(dataSnapshot.val().confidence === "Yes") {
-          junior.confidenceYes.push(dataSnapshot.val().confidence);
-        } else if (dataSnapshot.val().confidence === "No") {
-          junior.confidenceNo.push(dataSnapshot.val().confidence);
-        }
+      junior.collectJuniorRatings(dataSnapshot);
 
     } else if (dataSnapshot.val().cohort === "Oct 2015") {
       senior.challengeRating.push(dataSnapshot.val().challenge);
