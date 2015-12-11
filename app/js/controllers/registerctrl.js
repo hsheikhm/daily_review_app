@@ -11,7 +11,7 @@ dailyReviewApp.controller('RegisterCtrl', ['$scope', '$location',
         if (error) {
           console.log("Error creating user:", error);
         } else {
-          if ($scope.email === "admin@makers.com") {
+          if ($scope.makersAdmin()) {
             console.log("Successfully created user account with uid:", userData.uid);
             $scope.$apply(function() { $location.path("/login-success-path-coach"); });
           } else {
@@ -22,4 +22,8 @@ dailyReviewApp.controller('RegisterCtrl', ['$scope', '$location',
       });
     };
 
-  }]);
+    $scope.makersAdmin = function() {
+      return $scope.email === "admin@makers.com";
+    };
+
+}]);
