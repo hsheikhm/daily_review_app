@@ -43,4 +43,4 @@ Slackbot API.
 ```
 
 ####Contributors
-[Chuka Ebi](https://, Hamza Sheikh, Mahmud Hussain.
+[Chuka Ebi](https://github.com/ChukaEbi), [Hamza Sheikh](https://github.com/hsheikhm), [Mahmud Hussain](https://github.com/mahmudh).
