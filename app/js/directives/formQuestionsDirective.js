@@ -1,7 +1,7 @@
 dailyReviewApp.directive("cohortQuestion", function() {
   return {
     restrict: 'E',
-    templateUrl: "/views/cohort-question.html"
+    templateUrl: '/views/cohort-question.html'
   };
 });
 
