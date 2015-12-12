@@ -1,4 +1,4 @@
-## Makers Daily Review App
+## Makers Academy Daily Review App
 
 ###Demo:
 [Makers Academy Daily Review App](https://shining-fire-9962.firebaseapp.com/)
