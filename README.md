@@ -72,7 +72,19 @@ So that I can identify which students need more help
 I want to track those students who are struggling more than others
 ```
 
+## App Usage and Features
 
+***Student can login to daily review app via GitHub:***
+
+![Login Page](https://github.com/hsheikhm/Github-Images/blob/master/daily-review-app/login-student-page.png)
+
+***Student can complete feedback form:***
+
+![Form Page](https://github.com/hsheikhm/Github-Images/blob/master/daily-review-app/form-page.png)
+
+***Coach can view results from students' feedback:***
+
+![Coach Page](https://github.com/hsheikhm/Github-Images/blob/master/daily-review-app/coaches-page.png)
 
 ###Demo:
 [Makers Academy Daily Review App](https://shining-fire-9962.firebaseapp.com/)
