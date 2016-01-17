@@ -1,7 +1,8 @@
 ## Makers Academy Daily Review App
 
 * [The Problem](#the-problem)
-* [The Solution & Approach](#the-solution-and-approach)
+* [The Solution](#the-solution)
+* [Our Approach](#our-approach)
 * [User Stories](#user-stories)
 * [App Usage and Features](#app-usage-and-features)
 * [Demo App](#demo-app)
@@ -13,6 +14,17 @@
 In order for Makers Academy staff to receive feedback from all their current students, the students are required to complete a weekly learning plan whereby they would detail their achievements and difficulties etc. for the week. However, as students ourselves, we quickly realized that the majority were not filling their plans in each week. Therefore the coaches were not getting enough feedback from the students.
 
 Another problem was that students could only give constructive feedback on the week's challenges in the Friday retro session. This therefore made it too late for the coaches to make any changes to the challenges based on the feedback given.
+
+## The Solution
+
+We had 3 days to build an app that would solve this problem.
+
+We firstly built our own [Slackbot](https://github.com/hsheikhm/daily-review-slackbot) which sends a message to all students once everyday. Within the message is a link to a website which we created. The website allows the students to login (via GitHub) and then complete a very short feedback form where they can express concerns about the week's challenges, pairing sessions and even how they're feeling in general. On the other side, the coaches have a separate login. Once logged in, they can see the results of the students' feedback in a nicely visiualized manner. They can also easily see those students who are struggling more than others.
+
+## Our Approach
+
+
+
 
 ###Demo:
 [Makers Academy Daily Review App](https://shining-fire-9962.firebaseapp.com/)
