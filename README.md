@@ -86,15 +86,15 @@ I want to track those students who are struggling more than others
 
 ![Coach Page](https://github.com/hsheikhm/Github-Images/blob/master/daily-review-app/coaches-page.png)
 
-###Demo:
+## Demo
+
+Visit the link below to see a live version of the app.
+
 [Makers Academy Daily Review App](https://shining-fire-9962.firebaseapp.com/)
 
-```
-Log in through github
-Fill in and submit a form
-Log out and log in with email: admin@makers.com password: letmein
-data page for coaches is displayed
-```
+
+
+
 
 ### Installation:
 
