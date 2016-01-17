@@ -92,28 +92,17 @@ Visit the link below to see a live version of the app.
 
 [Makers Academy Daily Review App](https://shining-fire-9962.firebaseapp.com/)
 
+## Download Instructions
 
-
-
-
-### Installation:
-
-Install [NodeJS](https://nodejs.org/en/)
+Install [Node JS](https://nodejs.org/en/)
 
 ```
 git clone git@github.com:hsheikhm/daily_review_app.git
 npm install
 bower install
-create firebase database and deploy the application
-change the ref variables in controllers to point to your database url
 ```
+Create Firebase database and deploy the application
+Change the ref variables in controllers to point to your database url
 
-####Technologies used?
-```
-Angular/HTML/CSS for front end development.
-NodeJS/Firebase for back end.
-Slackbot API.
-```
-
-####Contributors
-[Chuka Ebi](https://github.com/ChukaEbi), [Hamza Sheikh](https://github.com/hsheikhm), [Mahmud Hussain](https://github.com/mahmudh).
+## Contributors
+[Chuka Ebi](https://github.com/ChukaEbi) | [Hamza Sheikh](https://github.com/hsheikhm) | [Mahmud Hussain](https://github.com/mahmudh)
