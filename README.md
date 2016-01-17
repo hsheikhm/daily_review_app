@@ -1,5 +1,13 @@
 ## Makers Daily Review App
 
+* [The Problem](#the-problem)
+* [The Solution & Approach](#the-solution-and-approach)
+* [User Stories](#user-stories)
+* [App Usage and Features](#app-usage-and-features)
+* [Demo App](#demo-app)
+* [Download Instructions](#download-instructions)
+* [Contributors](#contributors)
+
 ###Demo:
 [Makers Academy Daily Review App](https://shining-fire-9962.firebaseapp.com/)
 
@@ -30,7 +38,7 @@ how students are feeling.
 ```
 ####How it works?
 ```
-Slackbot sends a message with the web app url to individual students 
+Slackbot sends a message with the web app url to individual students
 A student fills in the form and clicks submit.
 Coaches log in to the web app and they are shown the data collected from the
 form.
