@@ -97,9 +97,9 @@ Visit the link below to see a live version of the app.
 Install [Node JS](https://nodejs.org/en/)
 
 ```
-git clone git@github.com:hsheikhm/daily_review_app.git
-npm install
-bower install
+$ git clone git@github.com:hsheikhm/daily_review_app.git
+$ npm install
+$ bower install
 ```
 Create Firebase database and deploy the application
 <br>
