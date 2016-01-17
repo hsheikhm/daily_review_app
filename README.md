@@ -102,6 +102,7 @@ npm install
 bower install
 ```
 Create Firebase database and deploy the application
+<br> 
 Change the ref variables in controllers to point to your database url
 
 ## Contributors
