@@ -23,13 +23,13 @@ We firstly built our own [Slackbot](https://github.com/hsheikhm/daily-review-sla
 
 ## Our Approach and Technologies
 
-|       | Tasks Completed |
-|:------|:----------------|
-| Day 1 | Created **Slackbot**. Set up website and login functions. Built the feedback form in Angular JS. Also set up a Firebase database and tested that data was getting stored from website. |
-| Day 2 | Restructured database to make it simpler to retrieve data. Created separate platform for coaches in Angular and started to display data from firebase in real-time. Created data display formats. |
-| Day 3 | Completed styling using HTML, CSS, Angular and Bootstrap. Deployed app to Firebase using a Node JS server. Refactored Angular code into several directives and factories. |
+|        | Tasks Completed |
+|:------:|:----------------|
+| **Day 1**  | Created **Slackbot**. Set up website and login functions. Built the feedback form in **Angular JS**. Also set up a **Firebase** database and tested that data was getting stored from website. |
+| **Day 2**  | Restructured database to make it simpler to retrieve data. Created separate platform for coaches in **Angular** and started to display data from **Firebase** in real-time. Created data display formats. |
+| **Day 3**  | Completed styling using **HTML**, **CSS**, **Angular** and **Bootstrap**. Deployed app to **Firebase** using a **Node JS** server. Refactored **Angular** code into several directives and factories. |
 
-We also stuck to regular stand-ups and made sure that we were always pairing. Unfortunately, due to the 3 day timeframe we didn't have any time for testing. This is something that we are currently working on.
+We also stuck to regular **stand-ups** and made sure that we were always **pairing**. Unfortunately, due to the 3 day timeframe we didn't have any time for **testing**. This is something that we are currently working on.
 
 ###Demo:
 [Makers Academy Daily Review App](https://shining-fire-9962.firebaseapp.com/)
