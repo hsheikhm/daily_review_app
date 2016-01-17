@@ -17,7 +17,7 @@ Another problem was that students could only give constructive feedback on the w
 
 ## The Solution
 
-We had 3 days to build an app that would solve this problem.
+We had **3 days** to build an app that would solve this problem.
 
 We firstly built our own [Slackbot](https://github.com/hsheikhm/daily-review-slackbot) which sends a message to all students once everyday. Within the message is a link to a website which we created. The website allows the students to login (via GitHub) and then complete a very short feedback form where they can express concerns about the week's challenges, pairing sessions and even how they're feeling in general. On the other side, the coaches have a separate login. Once logged in, they can see the results of the students' feedback in a nicely visiualized manner. They can also easily see those students who are struggling more than others.
 
@@ -30,6 +30,49 @@ We firstly built our own [Slackbot](https://github.com/hsheikhm/daily-review-sla
 | **Day 3**  | Completed styling using **HTML**, **CSS**, **Angular** and **Bootstrap**. Deployed app to **Firebase** using a **Node JS** server. Refactored **Angular** code into several directives and factories. |
 
 We also stuck to regular **stand-ups** and made sure that we were always **pairing**. Unfortunately, due to the 3 day timeframe we didn't have any time for **testing**. This is something that we are currently working on.
+
+## User Stories
+
+#### Student:
+
+```
+As a Student
+So that I can remember to give feedback about the course
+I want to receive a Slack message everyday that reminds me to complete a form
+
+As a Student
+So that I can easily enter the feedback website
+I want to be able to login with my own GitHub account
+
+As a Student
+So that I can provide detailed feedback
+I want to explain my reasons for giving a bad rating about anything
+
+As a Student
+So that I can provide daily feedback
+I want to submit my responses to a brief list of questions
+```
+#### Coach:
+
+```
+As a Coach
+So that I can securely login to the feedback website to view the results
+I want to have a separate login from the students
+
+As a Coach
+So that I can easily get an idea of how a cohort is doing
+I want to see data for each cohort
+
+As a Coach
+So that I can see how students are getting on each day
+I want to see a list of average ratings for their feedback responses
+
+As a Coach
+So that I can identify which students need more help
+I want to track those students who are struggling more than others
+```
+
+
 
 ###Demo:
 [Makers Academy Daily Review App](https://shining-fire-9962.firebaseapp.com/)
