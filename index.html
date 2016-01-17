@@ -22,58 +22,132 @@
       <h2>
 <a id="makers-academy-daily-review-app" class="anchor" href="#makers-academy-daily-review-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Makers Academy Daily Review App</h2>
 
-<h3>
-<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo:</h3>
+<ul>
+<li><a href="#the-problem">The Problem</a></li>
+<li><a href="#the-solution">The Solution</a></li>
+<li><a href="#our-approach-and-technologies">Our Approach &amp; Technologies</a></li>
+<li><a href="#user-stories">User Stories</a></li>
+<li><a href="#app-usage-and-features">App Usage and Features</a></li>
+<li><a href="#demo-app">Demo App</a></li>
+<li><a href="#download-instructions">Download Instructions</a></li>
+<li><a href="#contributors">Contributors</a></li>
+</ul>
+
+<h2>
+<a id="the-problem" class="anchor" href="#the-problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Problem</h2>
+
+<p>In order for Makers Academy staff to receive feedback from all their current students, the students are required to complete a weekly learning plan whereby they would detail their achievements and difficulties etc. for the week. However, as students ourselves, we quickly realized that the majority were not filling their plans in each week. Therefore the coaches were not getting enough feedback from the students.</p>
+
+<p>Another problem was that students could only give constructive feedback on the week's challenges in the Friday retro session. This therefore made it too late for the coaches to make any changes to the challenges based on the feedback given.</p>
+
+<h2>
+<a id="the-solution" class="anchor" href="#the-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Solution</h2>
+
+<p>We had <strong>3 days</strong> to build an app that would solve this problem.</p>
+
+<p>We firstly built our own <a href="https://github.com/hsheikhm/daily-review-slackbot">Slackbot</a> which sends a message to all students once everyday. Within the message is a link to a website which we created. The website allows the students to login (via GitHub) and then complete a very short feedback form where they can express concerns about the week's challenges, pairing sessions and even how they're feeling in general. On the other side, the coaches have a separate login. Once logged in, they can see the results of the students' feedback in a nicely visiualized manner. They can also easily see those students who are struggling more than others.</p>
+
+<h2>
+<a id="our-approach-and-technologies" class="anchor" href="#our-approach-and-technologies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Our Approach and Technologies</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left">Tasks Completed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Day 1</strong></td>
+<td align="left">Created <strong>Slackbot</strong>. Set up website and login functions. Built the feedback form in <strong>Angular JS</strong>. Also set up a <strong>Firebase</strong> database and tested that data was getting stored from website.</td>
+</tr>
+<tr>
+<td align="center"><strong>Day 2</strong></td>
+<td align="left">Restructured database to make it simpler to retrieve data. Created separate platform for coaches in <strong>Angular</strong> and started to display data from <strong>Firebase</strong> in real-time. Created data display formats.</td>
+</tr>
+<tr>
+<td align="center"><strong>Day 3</strong></td>
+<td align="left">Completed styling using <strong>HTML</strong>, <strong>CSS</strong>, <strong>Angular</strong> and <strong>Bootstrap</strong>. Deployed app to <strong>Firebase</strong> using a <strong>Node JS</strong> server. Refactored <strong>Angular</strong> code into several directives and factories.</td>
+</tr>
+</tbody>
+</table>
+
+<p>We also stuck to regular <strong>stand-ups</strong> and made sure that we were always <strong>pairing</strong>. Unfortunately, due to the 3 day timeframe we didn't have any time for <strong>testing</strong>. This is something that we are currently working on.</p>
+
+<h2>
+<a id="user-stories" class="anchor" href="#user-stories" aria-hidden="true"><span class="octicon octicon-link"></span></a>User Stories</h2>
+
+<h4>
+<a id="student" class="anchor" href="#student" aria-hidden="true"><span class="octicon octicon-link"></span></a>Student:</h4>
+
+<pre><code>As a Student
+So that I can remember to give feedback about the course
+I want to receive a Slack message everyday that reminds me to complete a form
+
+As a Student
+So that I can easily enter the feedback website
+I want to be able to login with my own GitHub account
+
+As a Student
+So that I can provide detailed feedback
+I want to explain my reasons for giving a bad rating about anything
+
+As a Student
+So that I can provide daily feedback
+I want to submit my responses to a brief list of questions
+</code></pre>
+
+<h4>
+<a id="coach" class="anchor" href="#coach" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coach:</h4>
+
+<pre><code>As a Coach
+So that I can securely login to the feedback website to view the results
+I want to have a separate login from the students
+
+As a Coach
+So that I can easily get an idea of how a cohort is doing
+I want to see data for each cohort
+
+As a Coach
+So that I can see how students are getting on each day
+I want to see a list of average ratings for their feedback responses
+
+As a Coach
+So that I can identify which students need more help
+I want to track those students who are struggling more than others
+</code></pre>
+
+<h2>
+<a id="app-usage-and-features" class="anchor" href="#app-usage-and-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>App Usage and Features</h2>
+
+<p>Snapshots of the app's features can be found on <a href="https://github.com/hsheikhm/daily_review_app#app-usage-and-features">GitHub</a></p>
+
+<h2>
+<a id="demo-app" class="anchor" href="#demo-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo App</h2>
+
+<p>Visit the link below to see a live version of the app.</p>
 
 <p><a href="https://shining-fire-9962.firebaseapp.com/">Makers Academy Daily Review App</a></p>
 
-<pre><code>Log in through github
-Fill in and submit a form
-Log out and log in with email: admin@makers.com password: letmein
-data page for coaches is displayed
+<h2>
+<a id="download-instructions" class="anchor" href="#download-instructions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download Instructions</h2>
+
+<p>Install <a href="https://nodejs.org/en/">Node JS</a></p>
+
+<pre><code>$ git clone git@github.com:hsheikhm/daily_review_app.git
+$ npm install
+$ bower install
 </code></pre>
 
-<h3>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation:</h3>
+<p>Create Firebase database and deploy the application
+<br>
+Change the ref variables in controllers to point to your database url</p>
 
-<p>Install <a href="https://nodejs.org/en/">NodeJS</a></p>
+<h2>
+<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors</h2>
 
-<pre><code>git clone git@github.com:hsheikhm/daily_review_app.git
-npm install
-bower install
-create firebase database and deploy the application
-change the ref variables in controllers to point to your database url
-</code></pre>
-
-<h4>
-<a id="what-is-the-project" class="anchor" href="#what-is-the-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is the project?</h4>
-
-<pre><code>Students at Makers Academy fill in a review form everyday, which gets stored on
-a database and displayed onto the coaches review page via data visualisation. Coaches can then understand
-how students are feeling.
-</code></pre>
-
-<h4>
-<a id="how-it-works" class="anchor" href="#how-it-works" aria-hidden="true"><span class="octicon octicon-link"></span></a>How it works?</h4>
-
-<pre><code>Slackbot sends a message with the web app url to individual students 
-A student fills in the form and clicks submit.
-Coaches log in to the web app and they are shown the data collected from the
-form.
-</code></pre>
-
-<h4>
-<a id="technologies-used" class="anchor" href="#technologies-used" aria-hidden="true"><span class="octicon octicon-link"></span></a>Technologies used?</h4>
-
-<pre><code>Angular/HTML/CSS for front end development.
-NodeJS/Firebase for back end.
-Slackbot API.
-</code></pre>
-
-<h4>
-<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors</h4>
-
-<p><a href="https://github.com/ChukaEbi">Chuka Ebi</a>, <a href="https://github.com/hsheikhm">Hamza Sheikh</a>, <a href="https://github.com/mahmudh">Mahmud Hussain</a>.</p>
+<p><a href="https://github.com/ChukaEbi">Chuka Ebi</a> | <a href="https://github.com/hsheikhm">Hamza Sheikh</a> | <a href="https://github.com/mahmudh">Mahmud Hussain</a></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/hsheikhm/daily_review_app">Daily Review App</a> is maintained by <a href="https://github.com/hsheikhm">hsheikhm</a>.</span>
