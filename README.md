@@ -2,7 +2,7 @@
 
 * [The Problem](#the-problem)
 * [The Solution](#the-solution)
-* [Our Approach](#our-approach)
+* [Our Approach & Technologies](#our-approach-and-technologies)
 * [User Stories](#user-stories)
 * [App Usage and Features](#app-usage-and-features)
 * [Demo App](#demo-app)
@@ -21,10 +21,15 @@ We had 3 days to build an app that would solve this problem.
 
 We firstly built our own [Slackbot](https://github.com/hsheikhm/daily-review-slackbot) which sends a message to all students once everyday. Within the message is a link to a website which we created. The website allows the students to login (via GitHub) and then complete a very short feedback form where they can express concerns about the week's challenges, pairing sessions and even how they're feeling in general. On the other side, the coaches have a separate login. Once logged in, they can see the results of the students' feedback in a nicely visiualized manner. They can also easily see those students who are struggling more than others.
 
-## Our Approach
+## Our Approach and Technologies
 
+|       | Tasks Completed |
+|:------|:----------------|
+| Day 1 | Created **Slackbot**. Set up website and login functions. Built the feedback form in Angular JS. Also set up a Firebase database and tested that data was getting stored from website. |
+| Day 2 | Restructured database to make it simpler to retrieve data. Created separate platform for coaches in Angular and started to display data from firebase in real-time. Created data display formats. |
+| Day 3 | Completed styling using HTML, CSS, Angular and Bootstrap. Deployed app to Firebase using a Node JS server. Refactored Angular code into several directives and factories. |
 
-
+We also stuck to regular stand-ups and made sure that we were always pairing. Unfortunately, due to the 3 day timeframe we didn't have any time for testing. This is something that we are currently working on.
 
 ###Demo:
 [Makers Academy Daily Review App](https://shining-fire-9962.firebaseapp.com/)
@@ -48,19 +53,6 @@ create firebase database and deploy the application
 change the ref variables in controllers to point to your database url
 ```
 
-####What is the project?
-```
-Students at Makers Academy fill in a review form everyday, which gets stored on
-a database and displayed onto the coaches review page via data visualisation. Coaches can then understand
-how students are feeling.
-```
-####How it works?
-```
-Slackbot sends a message with the web app url to individual students
-A student fills in the form and clicks submit.
-Coaches log in to the web app and they are shown the data collected from the
-form.
-```
 ####Technologies used?
 ```
 Angular/HTML/CSS for front end development.
