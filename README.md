@@ -1,4 +1,4 @@
-## Makers Daily Review App
+## Makers Academy Daily Review App
 
 * [The Problem](#the-problem)
 * [The Solution & Approach](#the-solution-and-approach)
@@ -51,4 +51,4 @@ Slackbot API.
 ```
 
 ####Contributors
-Chuka Ebi, Hamza Sheikh, Mahmud Hussain.
+[Chuka Ebi](https://github.com/ChukaEbi), [Hamza Sheikh](https://github.com/hsheikhm), [Mahmud Hussain](https://github.com/mahmudh).
