@@ -8,6 +8,12 @@
 * [Download Instructions](#download-instructions)
 * [Contributors](#contributors)
 
+## The Problem
+
+In order for Makers Academy staff to receive feedback from all their current students, the students are required to complete a weekly learning plan whereby they would detail their achievements and difficulties etc. for the week. However, as students ourselves, we quickly realized that the majority were not filling their plans in each week. Therefore the coaches were not getting enough feedback from the students.
+
+Another problem was that students could only give constructive feedback on the week's challenges in the Friday retro session. This therefore made it too late for the coaches to make any changes to the challenges based on the feedback given.
+
 ###Demo:
 [Makers Academy Daily Review App](https://shining-fire-9962.firebaseapp.com/)
 
