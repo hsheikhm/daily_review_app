@@ -86,7 +86,7 @@ I want to track those students who are struggling more than others
 
 ![Coach Page](https://github.com/hsheikhm/Github-Images/blob/master/daily-review-app/coaches-page.png)
 
-## Demo
+## Demo App
 
 Visit the link below to see a live version of the app.
 
@@ -102,7 +102,7 @@ npm install
 bower install
 ```
 Create Firebase database and deploy the application
-<br> 
+<br>
 Change the ref variables in controllers to point to your database url
 
 ## Contributors
