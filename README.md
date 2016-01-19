@@ -29,7 +29,7 @@ We firstly built our own [Slackbot](https://github.com/hsheikhm/daily-review-sla
 | **Day 2**  | Restructured database to make it simpler to retrieve data. Created separate platform for coaches in **Angular** and started to display data from **Firebase** in real-time. Created data display formats. |
 | **Day 3**  | Completed styling using **HTML**, **CSS**, **Angular** and **Bootstrap**. Deployed app to **Firebase** using a **Node JS** server. Refactored **Angular** code into several directives and factories. |
 
-We also stuck to regular **stand-ups** and made sure that we were always **pairing**. Unfortunately, due to the 3 day timeframe we didn't have any time for **testing**. This is something that we are currently working on. 
+We also stuck to regular **stand-ups** and made sure that we were always **pairing**. Unfortunately, due to the 3 day timeframe we didn't have any time for **testing**. This is something that we are currently working on.  
 
 ## User Stories
 
