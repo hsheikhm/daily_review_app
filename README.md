@@ -36,7 +36,7 @@ We also stuck to regular **stand-ups** and made sure that we were always **pairi
 #### Student:
 
 ```
-As a Student 
+As a Student  
 So that I can remember to give feedback about the course
 I want to receive a Slack message everyday that reminds me to complete a form
 
