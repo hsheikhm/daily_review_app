@@ -22,6 +22,7 @@
     "shelljs": "^0.2.6"
   },
   "devDependencies": {
+    "firebase-server": "^0.5.2",
     "karma": "^0.12.37",
     "karma-browserify": "^4.4.2",
     "karma-chrome-launcher": "^0.1.12",

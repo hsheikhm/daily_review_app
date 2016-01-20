@@ -1,12 +1,15 @@
-var MockFirebase = require('mockfirebase').MockFirebase;
-
 describe('LoginCtrl', function() {
 
   var ctrl, scope, ref;
+  var FirebaseServer = require('firebase-server');
 
-  // beforeEach(module("dailyReviewApp"));
+  new FirebaseServer(5000, 'test.firebase.localhost', {
+    users: {
+      "Hamza Sheikh": "hamza@makers.com"
+    }
+  });
 
-  beforeEach(angular.mock.module("dailyReviewApp"));
+  beforeEach(module("dailyReviewApp"));
 
   beforeEach(inject(function($controller) {
     ctrl = $controller('LoginCtrl');
@@ -16,20 +19,13 @@ describe('LoginCtrl', function() {
     scope = $rootScope;
   }));
 
-  beforeEach(function() {
-    MockFirebase.override();
-    ref = ctrl.ref;
-    ref.create({
-      email: 'makers@example.com',
-      password: 'makers'
-    });
-    ref.flush();
-  });
-
   describe('When creating a new user', function() {
 
     it('it gets stored in the database', function() {
-      console.assert(ref.getEmailUser('makers@example.com'), 'makers was created');
+      var client = new Firebase('ws://test.firebase.localhost:5000');
+      client.on('value', function(snap) {
+          console.log('Got value: ', snap.val());
+      });
     });
   });
 
