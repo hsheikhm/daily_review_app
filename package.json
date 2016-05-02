@@ -1,10 +1,12 @@
 {
-  "name": "daily_review_app",
+  "name": "daily-review-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm install",
+    "postinstall": "bower install && grunt",
     "start": "http-server -a 0.0.0.0 -p 8000"
   },
   "author": "",

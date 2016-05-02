@@ -36,7 +36,7 @@ We also stuck to regular **stand-ups** and made sure that we were always **pairi
 #### Student:
 
 ```
-As a Student 
+As a Student
 So that I can remember to give feedback about the course
 I want to receive a Slack message everyday that reminds me to complete a form
 
@@ -98,8 +98,11 @@ Install [Node JS](https://nodejs.org/en/)
 
 ```
 $ git clone git@github.com:hsheikhm/daily_review_app.git
+& cd daily_review_app
 $ npm install
 $ bower install
+$ npm start
+(On your browser visit: http://localhost:8000/)
 ```
 Create Firebase database and deploy the application
 <br>
