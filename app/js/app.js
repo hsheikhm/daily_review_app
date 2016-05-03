@@ -4,19 +4,19 @@ dailyReviewApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/', {
-        templateUrl: 'app/partials/login.html',
+        templateUrl: 'dist/partials/login.html',
         controller: 'LoginCtrl'
       }).
       when('/register', {
-        templateUrl: 'app/partials/register.html',
+        templateUrl: 'dist/partials/register.html',
         controller: 'RegisterCtrl'
       }).
       when('/login-success-path-student', {
-        templateUrl: 'app/partials/student-form.html',
+        templateUrl: 'dist/partials/student-form.html',
         controller: 'FormCtrl'
       }).
       when('/login-success-path-coach', {
-        templateUrl: 'app/partials/coach-findings.html',
+        templateUrl: 'dist/partials/coach-findings.html',
         controller: 'FindingsCtrl'
       }).
       otherwise({
