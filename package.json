@@ -27,7 +27,8 @@
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-cssmin": "^1.0.1"
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-htmlmin": "^1.4.0"
   },
   "devDependencies": {
     "karma": "^0.12.37",

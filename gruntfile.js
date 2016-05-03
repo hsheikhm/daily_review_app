@@ -20,7 +20,7 @@ module.exports = function(grunt){
       },
       dist: {
         src: ['app/js/**/*.js'],
-        dest: 'dist/<%= pkg.name %>.js'
+        dest: 'dist/js/<%= pkg.name %>.js'
       }
     },
 
@@ -30,7 +30,7 @@ module.exports = function(grunt){
       },
       dist: {
         files: {
-          'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+          'dist/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
         }
       }
     },
@@ -42,7 +42,22 @@ module.exports = function(grunt){
       },
       target: {
         files: {
-          'app/css/<%= pkg.name %>.min.css': ['app/css/app.css']
+          'dist/css/<%= pkg.name %>.min.css': ['app/css/app.css']
+        }
+      }
+    },
+
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'dist/partials/login.html': 'app/partials/login.html',
+          'dist/partials/register.html': 'app/partials/register.html',
+          'dist/partials/student-form.html': 'app/partials/student-form.html',
+          'dist/partials/coach-findings.html': 'app/partials/coach-findings.html'
         }
       }
     },
@@ -61,7 +76,8 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin']);
+  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin', 'htmlmin']);
 
 };

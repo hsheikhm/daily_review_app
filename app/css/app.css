@@ -1,5 +1,5 @@
 body {
-  background-image: url("images/students-by-windows.jpg") !important;
+  background-image: url("/app/css/images/students-by-windows.jpg") !important;
   flex: 1;
   /*background-repeat: no-repeat;*/
   background-size: cover;
