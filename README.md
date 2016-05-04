@@ -1,4 +1,4 @@
-## Makers Academy Daily Review App
+## Makers Academy Daily Review App [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com/)
 
 * [The Problem](#the-problem)
 * [The Solution](#the-solution)
